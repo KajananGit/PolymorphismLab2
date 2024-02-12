@@ -7,10 +7,13 @@ public class DealershipTest {
 
     Dealership dealership;
     Vehicle car;
+    Motorbike motorbike; // gets treated like a Vehicle class type
     @BeforeEach
     public void setUp(){
         dealership = new Dealership("BMW London");
         car = new Car(4, "Petrol", "Combustion", 75000, 520, true, 4, true, true);
+        motorbike = new Motorbike(2, "Petrol", "Combustion", 25000, 180, false, true);
+
     }
 
 
@@ -27,7 +30,8 @@ public class DealershipTest {
     @Test
     public void canAddNewStock(){
         dealership.addNewStock(car);
-        assertThat(dealership.countStock()).isEqualTo(1);
+        dealership.addNewStock(motorbike);
+        assertThat(dealership.countStock()).isEqualTo(2);
     }
 
     @Test
@@ -39,9 +43,10 @@ public class DealershipTest {
     @Test
     public void canSellVehicle(){
         dealership.addNewStock(car);
-        dealership.sellVehicle(car);
-        assertThat(dealership.countStock()).isEqualTo(0);
-        assertThat(dealership.getTill()).isEqualTo(75000);
+        dealership.addNewStock(motorbike);
+        dealership.sellVehicle(motorbike);
+        assertThat(dealership.countStock()).isEqualTo(1);
+        assertThat(dealership.getTill()).isEqualTo(25000);
     }
 
 
