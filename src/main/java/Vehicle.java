@@ -13,6 +13,11 @@ public abstract class Vehicle {
         this.maxSpeedBHP = maxSpeedBHP;
     }
 
+
+    public int getPrice(){
+        return price;
+    }
+
     public String accelerate(){
         return "Vroom";
     }

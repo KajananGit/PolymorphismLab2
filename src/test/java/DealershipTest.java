@@ -15,29 +15,36 @@ public class DealershipTest {
 
 
     @Test
+    public void canGetTill(){
+        assertThat(dealership.getTill()).isEqualTo(0);
+    }
+
+    @Test
     public void canCountStock(){
-        assertThat(dealership.countStock()).isEqualTo(null);
+        assertThat(dealership.countStock()).isEqualTo(0);
     }
 
     @Test
     public void canAddNewStock(){
         dealership.addNewStock(car);
-        assertThat(dealership.countStock().getSize()).isEqualTo(1);
+        assertThat(dealership.countStock()).isEqualTo(1);
+    }
+
+    @Test
+    public void canUpdateTill(){
+        dealership.updateTill(100);
+        assertThat(dealership.getTill()).isEqualTo(100);
     }
 
     @Test
     public void canSellVehicle(){
         dealership.addNewStock(car);
         dealership.sellVehicle(car);
-        assertThat(dealership.countStock()).isEqualTo(null);
+        assertThat(dealership.countStock()).isEqualTo(0);
+        assertThat(dealership.getTill()).isEqualTo(75000);
     }
 
-    @Test
-    public void canUpdateTill(){
-        dealership.addNewStock(car);
-        dealership.sellVehicle(car);
-        assertThat(dealership.updateTill()).isEqualTo(75000);
-    }
+
 
 
 }
