@@ -14,6 +14,11 @@ public class Car extends Vehicle{
     }
 
 
+    @Override
+    public String honk(){
+        return "BEEP BEEP!";
+    }
+
     public String playMusic(){
         return "Travis Scott";
     }

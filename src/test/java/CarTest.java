@@ -23,6 +23,11 @@ public class CarTest {
     }
 
     @Test
+    public void canHonk(){
+        assertThat(car.honk()).isEqualTo("BEEP BEEP!");
+    }
+
+    @Test
     public void canPlayMusic(){
         assertThat(car.playMusic()).isEqualTo("Travis Scott");
     }
