@@ -29,6 +29,4 @@ public class Car extends Vehicle{
         return "Artist: " + artist + "\n" + "Song: " + song;
     }
 
-
-
 }
