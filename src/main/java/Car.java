@@ -5,8 +5,8 @@ public class Car extends Vehicle{
     private boolean hasNavigation;
     private boolean hasBluetooth;
 
-    public Car(int maxCapacity, String fuelType, String motorType, int price, int maxSpeedBHP, boolean hasPanroof, int noOfWindows, boolean hasNavigation, boolean hasBluetooth) {
-        super(maxCapacity, fuelType, motorType, price, maxSpeedBHP);
+    public Car(int maxCapacity, String fuelType, String motorType, int price, int cost, int maxSpeedBHP, boolean hasPanroof, int noOfWindows, boolean hasNavigation, boolean hasBluetooth) {
+        super(maxCapacity, fuelType, motorType, price, cost, maxSpeedBHP);
         this.hasPanroof = hasPanroof;
         this.noOfWindows = noOfWindows;
         this.hasNavigation = hasNavigation;
@@ -22,6 +22,7 @@ public class Car extends Vehicle{
     public String playMusic(){
         return "Travis Scott";
     }
+
 
 
 }

@@ -9,7 +9,7 @@ public class CarTest {
 
     @BeforeEach
     public void setUp(){
-        car = new Car(4, "Petrol", "Combustion", 75000, 520, true, 4, true, true);
+        car = new Car(4, "Petrol", "Combustion", 75000, 30000, 520, true, 4, true, true);
     }
 
     @Test

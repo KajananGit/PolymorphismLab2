@@ -11,8 +11,8 @@ public class DealershipTest {
     @BeforeEach
     public void setUp(){
         dealership = new Dealership("BMW London");
-        car = new Car(4, "Petrol", "Combustion", 75000, 520, true, 4, true, true);
-        motorbike = new Motorbike(2, "Petrol", "Combustion", 25000, 180, false, true);
+        car = new Car(4, "Petrol", "Combustion", 75000, 30000, 520, true, 4, true, true);
+        motorbike = new Motorbike(2, "Petrol", "Combustion", 25000, 7500, 180, false, true);
 
     }
 

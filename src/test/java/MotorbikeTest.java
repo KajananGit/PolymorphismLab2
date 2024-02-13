@@ -9,7 +9,7 @@ public class MotorbikeTest {
 
     @BeforeEach
     public void setUp(){
-        motorbike = new Motorbike(2, "Petrol", "Combustion", 25000, 180, false, true);
+        motorbike = new Motorbike(2, "Petrol", "Combustion", 25000, 7500, 180, false, true);
     }
 
     @Test
