@@ -24,5 +24,11 @@ public class Car extends Vehicle{
     }
 
 
+//    overload method playMusic()
+    public String playMusic(String artist, String song) {
+        return "Artist: " + artist + "\n" + "Song: " + song;
+    }
+
+
 
 }

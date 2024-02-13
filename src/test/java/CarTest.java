@@ -29,12 +29,14 @@ public class CarTest {
 
     @Test
     public void canPlayMusic(){
-        assertThat(car.playMusic()).isEqualTo("Travis Scott");
+        assertThat(car.playMusic("Don Toliver", "Private Landing")).isEqualTo("Artist: Don Toliver" + "\n" + "Song: Private Landing");
     }
 
     @Test
     public void canCalculateProfit(){
         assertThat(car.calculateProfit()).isEqualTo(45000);
     }
+
+
 
 }
