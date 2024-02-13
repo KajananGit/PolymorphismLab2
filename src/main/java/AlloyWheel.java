@@ -18,4 +18,9 @@ public class AlloyWheel implements ISell {
     public int calculateProfit() {
         return this.price - this.cost;
     }
+
+    @Override
+    public int getPrice() {
+        return price;
+    }
 }

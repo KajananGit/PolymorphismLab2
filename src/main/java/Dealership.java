@@ -1,9 +1,11 @@
+import interfaces.ISell;
+
 import java.util.ArrayList;
 
 public class Dealership {
 
     private String name;
-    private ArrayList<Vehicle> stock;
+    private ArrayList<ISell> stock;
     private int till;
 
     public Dealership(String name){
@@ -20,16 +22,16 @@ public class Dealership {
         return stock.size();
     }
 
-    public void addNewStock(Vehicle vehicle){
-        stock.add(vehicle);
+    public void addNewStock(ISell product){
+        stock.add(product);
     }
 
     public void updateTill(int amount){
         till += amount;
     }
-    public void sellVehicle(Vehicle vehicle){
-        int price = vehicle.getPrice();
-        stock.remove(vehicle);
+    public void sellProduct(ISell product){
+        int price = product.getPrice();
+        stock.remove(product);
         updateTill(price);
     }
 

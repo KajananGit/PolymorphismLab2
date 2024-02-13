@@ -44,7 +44,7 @@ public class DealershipTest {
     public void canSellVehicle(){
         dealership.addNewStock(car);
         dealership.addNewStock(motorbike);
-        dealership.sellVehicle(motorbike);
+        dealership.sellProduct(motorbike);
         assertThat(dealership.countStock()).isEqualTo(1);
         assertThat(dealership.getTill()).isEqualTo(25000);
     }
