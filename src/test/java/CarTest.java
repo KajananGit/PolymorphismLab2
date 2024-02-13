@@ -32,6 +32,9 @@ public class CarTest {
         assertThat(car.playMusic()).isEqualTo("Travis Scott");
     }
 
-
+    @Test
+    public void canCalculateProfit(){
+        assertThat(car.calculateProfit()).isEqualTo(45000);
+    }
 
 }

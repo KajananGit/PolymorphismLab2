@@ -27,7 +27,10 @@ public class MotorbikeTest {
         assertThat(motorbike.honk()).isEqualTo("Toot toot!");
     }
 
-
+    @Test
+    public void canCalculateProfit(){
+        assertThat(motorbike.calculateProfit()).isEqualTo(17500);
+    }
 
 
 }
